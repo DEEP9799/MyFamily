@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">myfamily</string>
+    <string name="security">SECURITY</string>
+    <string name="sos_name">SOS</string>
+    <string name="guard">GUARD</string>
+    <string name="home">Home</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="Gurad_title">Guard</string>
+    <string name="myfamily">My Family</string>
+    <string name="icon_of_locations">icon of locations</string>
+    <string name="boy_image">boy image</string>
+    <string name="heart_img">heart img</string>
+    <string name="guard_img">guard img</string>
+    <string name="sos_img">SOS img</string>
+    <string name="openscreen">openScreen</string>
+    <string name="profile">Profile</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

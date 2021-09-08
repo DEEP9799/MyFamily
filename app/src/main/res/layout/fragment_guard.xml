@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray" >
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/brown_card"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_180"
+        android:layout_margin="@dimen/dimen_16"
+        app:cardBackgroundColor="@color/brown"
+        app:cardCornerRadius="@dimen/dimen_16"
+        app:cardElevation="@dimen/dimen_16"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/green_card"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_180"
+        android:layout_margin="@dimen/dimen_16"
+        android:layout_marginTop="120dp"
+        app:cardBackgroundColor="@color/green"
+        app:cardCornerRadius="@dimen/dimen_16"
+        app:cardElevation="@dimen/dimen_16"
+        app:layout_constraintTop_toBottomOf="@id/brown_card" />
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_16"
+        android:elevation="@dimen/dimen_8"
+        android:text="@string/security"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dimen_16_sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sos_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_16"
+        android:elevation="@dimen/dimen_16"
+        android:text="@string/sos_name"
+        android:textColor="#ffff"
+        android:textSize="@dimen/dimen_28_sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/brown_card"
+        app:layout_constraintTop_toTopOf="@id/brown_card"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/guard_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_16"
+        android:elevation="@dimen/dimen_16"
+        android:text="@string/guard"
+        android:textColor="#ffff"
+        android:textSize="@dimen/dimen_28_sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/green_card"
+        app:layout_constraintTop_toTopOf="@id/green_card"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/img_sos"
+        android:layout_width="@dimen/dimen_120"
+        android:layout_height="@dimen/dimen_120"
+        android:layout_margin="@dimen/dimen_16"
+        android:contentDescription="@string/sos_img"
+        android:elevation="@dimen/dimen_16"
+        android:src="@drawable/ic_sos"
+        app:layout_constraintEnd_toEndOf="@id/brown_card"
+        app:layout_constraintTop_toTopOf="@id/brown_card" />
+
+    <ImageView
+        android:id="@+id/img_guard"
+        android:layout_width="@dimen/dimen_120"
+        android:layout_height="@dimen/dimen_120"
+        android:layout_margin="@dimen/dimen_16"
+        android:contentDescription="@string/guard_img"
+        android:elevation="@dimen/dimen_16"
+        android:src="@drawable/ic_guard"
+        app:layout_constraintEnd_toEndOf="@id/green_card"
+        app:layout_constraintTop_toBottomOf="@id/brown_card"
+        app:layout_constraintTop_toTopOf="@id/green_card" />
+
+    <TextView
+        android:id="@+id/sos_msg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_16"
+        android:elevation="@dimen/dimen_16"
+        android:text="Select your favorite social network and share our icons with your contacts or friends,"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/img_sos"
+        app:layout_constraintStart_toStartOf="@id/brown_card"
+        app:layout_constraintTop_toBottomOf="@id/sos_text"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/guard_msg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_16"
+        android:elevation="@dimen/dimen_16"
+        android:text="Select your favorite social network and share our icons with your contacts or friends,"
+        android:textColor="#fff"
+        app:layout_constraintEnd_toStartOf="@id/img_guard"
+        app:layout_constraintStart_toStartOf="@id/green_card"
+        app:layout_constraintTop_toBottomOf="@id/guard_text"
+        tools:ignore="HardcodedText" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

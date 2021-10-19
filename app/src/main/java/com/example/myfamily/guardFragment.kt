@@ -5,22 +5,21 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.myfamily.databinding.FragmentGuardBinding
 
 
 class guardFragment : Fragment() {
 
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
+lateinit var binding:FragmentGuardBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
-        return inflater.inflate(R.layout.fragment_guard, container, false)
+        binding  = FragmentGuardBinding.inflate(inflater,container,false)
+
+        return binding.root
     }
 
     companion object {

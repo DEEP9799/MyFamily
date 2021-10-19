@@ -16,4 +16,11 @@
     <string name="profile">Profile</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="collapse">Collapse</string>
+    <string name="deepak">Deepak</string>
+    <string name="_16_40">16:40</string>
+    <string name="_9th_buildind_2nd_floor_maldiv_road_manali_9th_buildind_2nd_floor_9th_buildind_2nd_floor">9th buildind, 2nd floor, maldiv road, manali 9th buildind, 2nd floor 9th buildind, 2nd floor,</string>
+    <string name="_90">90%</string>
+    <string name="default_web_client_id_">39433779488-pnbos2g4040cmhs0lvdffb370dg5578g.apps.googleusercontent.com</string>
+    <string name="continue_to_google">Continue to google</string>
 </resources>

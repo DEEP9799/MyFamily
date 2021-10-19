@@ -13,187 +13,55 @@
         android:layout_margin="@dimen/dimen_16"
         android:text="@string/myfamily"
         android:textColor="@color/black"
-        android:textSize="@dimen/dimen_26_sp"
+        android:textSize="@dimen/dimen_21_sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardone"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dimen_150"
-        android:layout_margin="@dimen/dimen_16"
-        app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="@dimen/dimen_16"
-        app:cardElevation="@dimen/dimen_16"
-
-        app:layout_constraintTop_toBottomOf="@id/title" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardtwo"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dimen_150"
-        android:layout_margin="@dimen/dimen_16"
-        app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="@dimen/dimen_16"
-        app:cardElevation="@dimen/dimen_16"
-        app:layout_constraintTop_toBottomOf="@id/cardone"/>
-
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardthree"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dimen_150"
-        android:layout_margin="@dimen/dimen_16"
-        app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="@dimen/dimen_16"
-        app:cardElevation="@dimen/dimen_16"
-        app:layout_constraintTop_toBottomOf="@id/cardtwo" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardfour"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dimen_150"
-        android:layout_margin="@dimen/dimen_16"
-        app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="@dimen/dimen_16"
-        app:cardElevation="@dimen/dimen_16"
-        app:layout_constraintTop_toBottomOf="@id/cardthree" />
-
-
     <ImageView
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_margin="@dimen/dimen_16"
-        android:contentDescription="@string/icon_of_locations"
+        android:id="@+id/icon_location"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_margin="@dimen/dimen_8"
         android:src="@drawable/ic_location"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_margin="@dimen/dimen_16"
-        android:contentDescription="@string/icon_of_locations"
+        android:id="@+id/icon_three_dots"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_margin="@dimen/dimen_8"
         android:src="@drawable/ic_dot"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/one_img"
-        android:layout_width="@dimen/dimen_80"
-        android:layout_height="@dimen/dimen_80"
-        android:layout_margin="@dimen/dimen_16"
-        android:background="#abdcd9"
-        android:elevation="@dimen/dimen_16"
-        android:src="@drawable/ic_boy"
-        app:layout_constraintStart_toStartOf="@id/cardone"
-        app:layout_constraintTop_toTopOf="@+id/cardone" />
-
-    <ImageView
-        android:id="@+id/two_img"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_margin="@dimen/dimen_16"
-        android:background="#efb6ae"
-        android:elevation="@dimen/dimen_16"
-        android:src="@drawable/ic_girl"
-        app:layout_constraintStart_toStartOf="@id/cardtwo"
-        app:layout_constraintTop_toTopOf="@+id/cardtwo" />
-
-    <ImageView
-        android:id="@+id/three_img"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_margin="@dimen/dimen_16"
-        android:background="#fcc7d5"
-        android:elevation="@dimen/dimen_16"
-        android:src="@drawable/ic_girls"
-        app:layout_constraintStart_toStartOf="@id/cardthree"
-        app:layout_constraintTop_toTopOf="@+id/cardthree" />
-
-    <ImageView
-        android:id="@+id/four_img"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_margin="@dimen/dimen_16"
-        android:elevation="@dimen/dimen_16"
-        android:src="@drawable/ic_oldmen"
-        app:layout_constraintStart_toStartOf="@id/cardfour"
-        app:layout_constraintTop_toTopOf="@+id/cardfour" />
-
-    <ImageView
-        android:id="@+id/fourA_img"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_margin="@dimen/dimen_16"
-        android:elevation="@dimen/dimen_16"
-        android:src="@drawable/ic_women"
-        app:layout_constraintStart_toEndOf="@id/four_img"
-        app:layout_constraintTop_toTopOf="@id/cardfour" />
-
-    <ImageView
-        android:id="@+id/fourB_img"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_margin="@dimen/dimen_16"
-        android:elevation="@dimen/dimen_16"
-        android:src="@drawable/ic_yngmen"
-        app:layout_constraintStart_toEndOf="@id/fourA_img"
-        app:layout_constraintTop_toTopOf="@id/cardfour" />
-
-    <ImageView
-        android:id="@+id/fourC_img"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_margin="@dimen/dimen_16"
-        android:elevation="@dimen/dimen_16"
-        android:src="@drawable/ic_men"
-        app:layout_constraintStart_toEndOf="@id/fourB_img"
-        app:layout_constraintTop_toTopOf="@id/cardfour" />
-
-    <TextView
-        android:id="@+id/cardone_text"
-        android:layout_width="wrap_content"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/invite_card"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dimen_16"
-        android:elevation="@dimen/dimen_16"
-        android:text="Yarosalv Zubka"
-        android:textColor="@color/black"
-        android:textSize="@dimen/dimen_24_sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@id/one_img"
-        app:layout_constraintTop_toTopOf="@id/cardone" />
+        app:cardCornerRadius="@dimen/dimen_16"
+        app:cardElevation="@dimen/dimen_8"
+        app:layout_constraintBottom_toBottomOf="parent">
 
-    <TextView
-        android:id="@+id/cardtwo_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/dimen_16"
-        android:elevation="@dimen/dimen_16"
-        android:text="Maria Jose Botin'"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_invite"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="@dimen/dimen_8"
+            tools:listitem="@layout/item_invite" />
+    </com.google.android.material.card.MaterialCardView>
 
-        android:textColor="@color/black"
-        android:textSize="@dimen/dimen_24_sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@id/two_img"
-        app:layout_constraintTop_toTopOf="@id/cardtwo" />
-
-    <TextView
-        android:id="@+id/cardthree_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/dimen_16"
-        android:elevation="@dimen/dimen_16"
-        android:text="Ashish asharful'"
-
-        android:textColor="@color/black"
-        android:textSize="@dimen/dimen_24_sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@id/three_img"
-        app:layout_constraintTop_toTopOf="@id/cardthree" />
-
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycle_member"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/invite_card"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        tools:listitem="@layout/item_member" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -70,6 +70,8 @@ class LoginActivity : AppCompatActivity() {
                     val user = auth.currentUser
                     Log.d("fire89", "firebaseAuthWithGoogle:${user?.displayName} ")
 
+                    startActivity(Intent(this,MainActivity::class.java))
+
                 } else {
 
                     Log.w("Error99", "signInWithCredential:failure", task.exception)

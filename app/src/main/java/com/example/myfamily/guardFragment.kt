@@ -10,15 +10,19 @@ import com.example.myfamily.databinding.FragmentGuardBinding
 
 class guardFragment : Fragment() {
 
-lateinit var binding:FragmentGuardBinding
+    lateinit var binding: FragmentGuardBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
-        binding  = FragmentGuardBinding.inflate(inflater,container,false)
+        binding = FragmentGuardBinding.inflate(inflater, container, false)
+        binding.btn.setOnClickListener {
 
+            var value = binding.btn.text
+
+        }
         return binding.root
     }
 
@@ -28,6 +32,6 @@ lateinit var binding:FragmentGuardBinding
         fun newInstance() = guardFragment()
 
 
-            }
+    }
 
 }

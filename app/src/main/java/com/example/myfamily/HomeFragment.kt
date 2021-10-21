@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myfamily.databinding.FragmentHomeBinding
@@ -124,6 +125,8 @@ class HomeFragment : Fragment() {
 
             FirebaseAuth.getInstance().signOut()
         }
+        //shimmer effect
+        binding.shimmer.startShimmerAnimation()
 
     }
 
@@ -137,7 +140,12 @@ class HomeFragment : Fragment() {
             listContacts.addAll(it)
 
             inviteAdapter.notifyDataSetChanged()
-        }
+            //shimmer effect
+            if(it.isNotEmpty()){
+           binding.shimmer.stopShimmerAnimation()
+            binding.shimmer.isVisible = false
+
+        }}
     }
 
 

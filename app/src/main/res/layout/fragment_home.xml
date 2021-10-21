@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".HomeFragment">
 
+
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
@@ -46,6 +47,15 @@
         app:cardElevation="@dimen/dimen_8"
         app:layout_constraintBottom_toBottomOf="parent">
 
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dimen_8" >
+
+            <include layout="@layout/item_invite_shimmer"/>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_invite"
             android:layout_width="match_parent"
@@ -53,6 +63,7 @@
             android:layout_marginTop="@dimen/dimen_8"
             tools:listitem="@layout/item_invite" />
     </com.google.android.material.card.MaterialCardView>
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycle_member"

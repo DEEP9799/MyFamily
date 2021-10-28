@@ -18,8 +18,11 @@ class DashboardFragment : Fragment() {
     ): View? {
 
         binding = FragmentDashboardBinding.inflate(inflater,container,false)
+        binding.btn.setOnClickListener{
 
+        }
         return binding.root
+
     }
 
     companion object {

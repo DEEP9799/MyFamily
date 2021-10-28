@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dimen_8"
+    tools:ignore="MissingClass">
+
+    <TextView
+
+        android:id="@+id/textview"
+        android:layout_width="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="@dimen/dimen_16"
+        app:layout_constraintEnd_toStartOf="@id/accept" />
+
+    <TextView
+        android:id="@+id/accept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dimen_8"
+        android:text="Accept"
+        android:textColor="@color/LightBlue"
+        android:textSize="@dimen/dimen_16_sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/deny"
+      app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/deny"
+        android:layout_width="wrap_content"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_16"
+        android:text="Deny"
+
+        android:textColor="@color/Red"
+        android:textSize="@dimen/dimen_16_sp"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

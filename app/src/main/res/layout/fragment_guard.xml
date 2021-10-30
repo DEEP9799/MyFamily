@@ -133,22 +133,25 @@
 
     <EditText
         android:id="@+id/finduser"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dimen_16"
         android:padding="@dimen/dimen_8"
+        app:layout_constraintEnd_toStartOf="@id/btn"
+        app:layout_constraintStart_toStartOf="parent"
+
         app:layout_constraintTop_toBottomOf="@id/Email" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/sendbutton"
-        android:layout_width="143dp"
+        android:id="@+id/btn"
+        android:layout_width="140dp"
         android:layout_height="63dp"
         android:layout_margin="@dimen/dimen_8"
         android:layout_marginEnd="68dp"
         android:layout_marginBottom="52dp"
         android:text="Send request"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Email" />
 
     <TextView
         android:id="@+id/invite_status"
@@ -162,15 +165,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/finduser" />
 
-     <androidx.recyclerview.widget.RecyclerView
-         android:id="@+id/recycler_request"
-         app:layout_constraintTop_toBottomOf="@id/invite_status"
-         app:layout_constraintStart_toStartOf="parent"
-         app:layout_constraintBottom_toTopOf="@id/sendbutton"
-         android:layout_width="match_parent"
-         tools:listitem="@layout/item_invite_mail"
-         android:layout_margin="@dimen/dimen_16"
-         android:layout_height="0dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_request"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/dimen_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/invite_status"
+        tools:listitem="@layout/item_invite_mail" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -1,5 +1,6 @@
 package com.example.myfamily
 
+import android.content.Context
 import android.os.Bundle
 import android.provider.ContactsContract
 import android.util.Log
@@ -20,8 +21,14 @@ import kotlinx.coroutines.*
 class HomeFragment : Fragment() {
 
     lateinit var inviteAdapter: InviteAdapter
-
+    lateinit var mContext: Context
     private val listContacts: ArrayList<ContactModel> = ArrayList()
+
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        mContext = context
+    }
 
     //View binding declare 26 to replace findbyview
     lateinit var binding: FragmentHomeBinding
@@ -36,6 +43,7 @@ class HomeFragment : Fragment() {
 
         return binding.root
     }
+
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -86,7 +94,7 @@ class HomeFragment : Fragment() {
         //item member call
         val adapter = MemberAdapter(listMembers)
 
-        binding.recycleMember.layoutManager = LinearLayoutManager(requireContext())
+        binding.recycleMember.layoutManager = LinearLayoutManager(mContext)
         binding.recycleMember.adapter = adapter
 
 
@@ -114,11 +122,11 @@ class HomeFragment : Fragment() {
 
 
         binding.recyclerInvite.layoutManager =
-            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+            LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false)
         binding.recyclerInvite.adapter = inviteAdapter
 
 
-           //signout
+        //signout
         binding.iconThreeDots.setOnClickListener {
 
             SharedPrf.putBoolean(PrefContants.Is_User_Logged_In, false)
@@ -131,7 +139,7 @@ class HomeFragment : Fragment() {
     }
 
     private fun facthDataBaseContacts() {
-        val database = MyFamilyDataBase.getDatabase(requireContext())
+        val database = MyFamilyDataBase.getDatabase(mContext)
         database.contactDao().getAllContacts().observe(viewLifecycleOwner) {
 
             Log.d("Fatch89", "facthDataBaseContacts: ")
@@ -141,16 +149,17 @@ class HomeFragment : Fragment() {
 
             inviteAdapter.notifyDataSetChanged()
             //shimmer effect
-            if(it.isNotEmpty()){
-           binding.shimmer.stopShimmerAnimation()
-            binding.shimmer.isVisible = false
+            if (it.isNotEmpty()) {
+                binding.shimmer.stopShimmerAnimation()
+                binding.shimmer.isVisible = false
 
-        }}
+            }
+        }
     }
 
 
     private suspend fun insertDataBaseContacts(listContacts: ArrayList<ContactModel>) {
-        val database = MyFamilyDataBase.getDatabase(requireContext())
+        val database = MyFamilyDataBase.getDatabase(mContext)
         database.contactDao().insertAll(listContacts)
     }
 
